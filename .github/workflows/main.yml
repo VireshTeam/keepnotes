@@ -70,9 +70,6 @@ jobs:
       - name: 'Docker Auth'
         run: |-
           gcloud auth configure-docker "${{ env.REGION }}-docker.pkg.dev"
-      - name: 'Set Project'
-        run: |-
-          gcloud config set project ${{ env.PROJECT_ID }}
           
       - name: 'Build and Push Container'
         run: |-
