@@ -36,7 +36,7 @@ on:
 
 env:
   PROJECT_ID: 'keepnotes-439603' # TODO: update to your Google Cloud project ID
-  GAR_NAME: 'gh-demo'
+  GAR_NAME: 'ghdemos'
   GAR_LOCATION: 'asia-south2'
   REGION: 'asia-south2' # TODO: update to your region
   SERVICE: 'mykeepnotes' # TODO: update to your service name
