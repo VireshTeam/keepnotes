@@ -71,7 +71,10 @@ jobs:
       - name: 'Docker Auth'
         run: |-
           gcloud auth configure-docker "${{ env.REGION }}-docker.pkg.dev"
-
+      - name: 'Set Project'
+        run: |-
+          gcloud config set project ${{ env.PROJECT_ID }}
+          
       - name: 'Build and Push Container'
         run: |-
           gcloud builds submit --tag ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.GAR_NAME }}/${{ env.SERVICE }}:${{ github.sha }}
